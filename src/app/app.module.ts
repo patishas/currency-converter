@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { UsdValueComponent } from './usd-value/usd-value.component';
+import { YenValueComponent } from './yen-value/yen-value.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsdValueComponent,
+    YenValueComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

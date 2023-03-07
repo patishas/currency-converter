@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'currency-converter';
+  title = "Currency Converter";
+
+  yenValue : string = '0';
+  usdValue : string = '0';
+
+  onUsdValueChange(value: string) {
+    this.yenValue=value;
+  }
+
+  onYenValueChange(value: string) {
+    this.usdValue=value;
+  }
 }

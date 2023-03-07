@@ -1,27 +1,64 @@
-# CurrencyConverter
+# Currency Converter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+## Environment 
 
-## Development server
+- Angular CLI Version: 10.0.4
+- Angular Core Version: 10.0.4
+- Node Version: v14 (LTS)
+- Default Port: 8000
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Application Demo:
 
-## Code scaffolding
+![](https://hrcdn.net/s3_pub/istreet-assets/yIYeU82m7pJjGXw3jfpLjQ/currency-converter.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Functionality Requirements
 
-## Build
+Complete a partially completed Angular application that converts the Japanese Yen to US Dollars and vice versa.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Certain core Angular functionalities have already been implemented. Complete the Angular application as shown below in order to pass all the unit tests.
 
-## Running unit tests
+The application has the following functionalities:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- The app has two components:
+  - The `UsdValue` component, which has a textbox to type/show US Dollars value.
+  - The `YenValue` component, which has a textbox to type/show Japanese Yen value.
 
-## Running end-to-end tests
+- The following list of actions should be supported by the app:
+  - Enter the value in `UsdValue` textbox to convert it into Japanese Yen and render correctly in the `YenValue` textbox
+  - Delete text from either textboxs
+  - Enter the value in `YenValue` textbox to convert it into US Dollars and render correctly in the `UsdValue` textbox
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Tests take care of testing with valid number inputs and show all decimal points.
 
-## Further help
+- The currency conversion rates to be used are given as follows:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+|  | Japanese Yen | US Dollar |
+| :---: | :---: | :---: |
+| Japanese Yen | 1 | 0.0090 |
+| US Dollar	 | 110 | 1 |
+
+## Testing Requirements
+
+The following data-test-id attributes are required in the component for the tests to pass:
+
+- The UsdValue textbox should the data-test-id attribute 'usd-value'.
+- The YenValue textbox should have the data-test-id attribute 'yen-value'.
+
+## Project Specifications
+
+**Read-only Files**
+- src/app/app.component.spec.ts
+
+**Commands**
+- run: 
+```bash
+npm start
+```
+- install: 
+```bash
+npm install
+```
+- test: 
+```bash
+npm test
+```
